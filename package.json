@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon -e sass,pug,js src/index.js",
+    "start": "node index.js",
+    "test": "nodemon -e sass,pug,js index.js",
     "sass": "node-sass -w src/public/sass -o src/public/css"
   },
   "author": "",
