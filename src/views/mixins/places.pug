@@ -1,0 +1,11 @@
+mixin places(cuantity)
+    each item of cuantity
+                .place
+                    .item-preview
+                        p some tex here
+                        button#exBtn.fa.fa-chevron-down
+                    .item-data
+                        p.description text here
+                        a.more-details(href="/stallPage/:stall_id") More details ->
+                        p.item-type and here
+        button#reset-search-btn.reset-search-btn Reset Search

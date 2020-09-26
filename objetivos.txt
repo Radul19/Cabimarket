@@ -1,0 +1,33 @@
+Objetivos: 
+
+º1 - CRUD de las tiendas (pines) en el mapa
+º2 - Guardar información sobre la tienda
+    º2.1 - Nombre
+    º2.2 - Tipo de tienda (Super Market, Mini Market, Stall...)
+    º2.3 - Descripción
+    º2.4 - Ubicacion (ya previamente establecida ofc)
+    º2.5 - Productos
+        
+    º2.6 Validar si la tienda es responsable de sus datos (pines) (PROXIMAMENTE)<------------------------------
+
+º3 - Buscar tiendas por nombre,tipo,articulos que tienen e imprimirlos en el left-container
+    º3.1 - Mostrar datos selectivos de la Tienda
+        º3.1.1 Nombre
+        º3.1.2 Descripción
+        º3.1.3 Productos o tipos de productos (REVISAR) <------------------------------------------------------
+    º3.2 - Botón para resetear datos de busqueda
+º4 - Mostrar u ocultar left - right containers (PROXIMAMENTE) <------------------------------------------------
+º5 - Crear y guardar lista de articulos a comprar  (PROXIMAMENTE) <--------------------------------------------
+    º5.1 - Planear la ruta mas corta recorriendo todas las tiendas con los articulos que se necesitan (REVISAR) <--
+º6 - Base de datos de productos (PROXIMAMENTE) <---------------------------------------------------------------
+    º6.1 - Nombre
+    º6.2 - Precio en bolivares y convertir a dolares
+    º6.3 - Definir tipos de productos 
+    º6.4 - Disponibilidad de productos
+
+º7 - Limitar los markers (pines) a cabimas o un área determinada (PROXIMAMENTE) <------------------------------
+º8 - Right bar- contendrá lista de opciones de la cuenta (PROXIMAMENTE) <--------------------------------------
+    º8.1 Home button
+    º8.2 Carrito de compras
+    º8.3.Crear lista de compras
+    º8.4 Buscador general

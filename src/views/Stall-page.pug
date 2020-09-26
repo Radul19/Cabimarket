@@ -1,0 +1,88 @@
+extends ../views/templates/basicTemplate
+
+
+block style
+    link(rel="stylesheet" href="/css/stall-page.css")
+
+block main
+    -let prod_items = ['consumible','clean','healty']   
+    -let input_array = ['Nombre','Tipo','Cantidad','Precio']
+    if stall
+        .sticky-ctn
+            .absolute-ctn
+                #float-ctn.float-ctn.fade
+                    h1 Add Product
+                    .name
+                        label(for="name-inpt") Nombre
+                        input#name-inpt(type="text")
+                    .type
+                        label(for="type-inpt") Tipo
+                        select#type-inpt(name="options")
+                            option(value="alimenticio") Alimenticio
+                            option(value="tecnologico") Tecnologico
+                            option(value="salud") Salud 
+                            option(value="farmaceutico") Farmaceutico
+                            option(value="higiene") Higiene
+                            option(value="otros") Otros
+                    .amount
+                        label(for="amount-inpt" ) Cantidad
+                        input#amount-inpt(type="number" min="0")
+                    .price
+                        label(for="price-inpt") Precio
+                        .price-select
+                            input#price-inpt(type="number")
+                            span .00
+                            select(name="Moneda")
+                                option(value="Bs") Bs.
+                                option(value="$") $
+
+                    .btns
+                        button.cancelar Cancelar
+                        button.aceptar Aceptar
+                    
+        nav.nav-bar
+            .nav-ol-left
+                a.book(href="/")
+                    i.fa.fa-book.fa-2x
+                    p About
+                a.phone(href="/")
+                    i.fa.fa-phone.fa-2x
+                    p Contact us
+            .nav-ol-right
+                a.home(href="/")
+                    i.fa.fa-home.fa-2x
+                    p Home
+                a.list(href="/")
+                    i.fa.fa-book.fa-2x
+                    p My List
+
+        .general-container
+            .g-ctn-left
+                img(src="/img/wowLogo.png" alt="")
+                h1=stall.place
+            .g-ctn-right
+                p.stall-type=stall.mtype
+                p.stall-description Something here long enough to be a good description for the place, just in case
+
+        section.products-container
+            nav.prod-container-nav
+                button#btn-add
+                    i.fa.fa-plus
+                    p Add
+                input(type="text")
+            .prod-container-lists
+                each item of prod_items
+                    div(class=`${item} div-item`)
+                        .head
+                            p.title Name
+                            p.avalible  Avalible
+                            p.price Price
+                            button#btn-show-list-body.fa.fa-angle-down
+                        .list-body
+        
+
+        
+        
+    else
+        p El lugar que está buscando no está disponible o no existe ): 
+    script(src="/scripts/stall-page.js")

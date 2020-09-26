@@ -1,0 +1,217 @@
+@import "v-colors.sass"
+@import "v-pins.sass"
+  
+body
+  font-family: sans-serif
+  color: $four
+  display: grid
+  grid-template-columns: 2fr 6fr 1fr
+  background-color: $four
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+  margin: 0px
+
+/* //////////////// MAP CONTAINER //////////////*/
+#map-template
+  display: flex
+  width: 100%
+  height: 100%
+  margin: auto
+  background-color: #4b4e5c
+  z-index: 10
+.btn
+  width: 200px
+  height: 30px
+  margin: 1em auto
+
+.black
+  background-color: black
+
+
+/* //////////////// LEFT CONTAINER //////////////*/
+.right-container
+  box-sizing: border-box
+  margin: 0px 1em
+  background-color: $primary
+  display: flex
+  flex-direction: column
+  .btn-cancel-pin
+    width: 80%
+    background-color: $red
+  
+.btn-delete
+  margin: 0px auto
+  color: $primary
+  background-color: $red
+  width: 80%
+  padding: .5em 0px
+  border-radius: 5px
+
+/* //////////////// LEFT CONTAINER //////////////*/
+.left-container
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+  // width: 100%
+  // height: 100%
+  background-color: $third
+  margin: 0px 1em
+  padding: .5em 0px
+  .search-bar
+    box-sizing: border-box
+    width: 100%
+    display: flex
+    padding: .5em
+    justify-content: center
+    input
+      border: 1px solid black
+      border-right: 0px
+      width: 90%
+      padding: .3em
+    button
+      padding: .5em
+      border: 1px solid black
+      border-left: 0px
+      background-color: $second
+  .places-container
+    display: flex
+    // overflow-y: hidden
+    flex-direction: column
+    background-color: $primary-four
+    margin: 1em auto
+    // padding: .5em 0px
+    width: 95%
+    // height: 50vh
+    .item-preview
+      box-sizing: border-box
+      display: flex
+      justify-content: space-between
+      background-color: $primary
+      margin: -1px auto
+      border: 1px solid black
+      width: 100%
+      
+      p
+        margin: auto
+        // background-color: red
+      button
+        padding: 1em
+        background-color: $primary
+        color: $third
+        &:hover
+          background-color: $four
+        &:active
+          background-color: initial
+    .item-data
+      display: none
+      flex-direction: column
+      background-color: $primary
+      border: 1px solid $primary-four
+      overflow-y: hidden
+      h1
+        font-size: 1.2em
+        margin: auto
+      .item-type
+        margin: auto
+      .more-details
+        align-self: flex-end
+        width: fit-content
+        font-size: 0.8em
+        color: blue
+        border-bottom: 1px solid blue
+  .reset-search-btn
+    margin: 1em auto
+    padding: 1em
+    color: $primary
+    border-radius: 5px
+    background-color: $red
+      
+
+
+
+
+/* //////////////// ABSOLUTE CONTAINER //////////////*/
+.absolute-ctn
+  position: absolute
+  display: none
+  width: 100vw
+  height: 100vh
+  background-color: #00000077
+  z-index: 20
+  .ctn-div
+    display: flex
+    flex-direction: column
+    position: relative
+    width: 30%
+    height: 30%
+    margin: 10vh auto
+    background-color: $primary
+    border-radius: 5px
+    padding: 1em
+    #cross-btn
+      position: absolute
+      width: 30px
+      margin: 0px
+      height: 30px
+      // background-color: red
+      right: 0
+      top: 0
+    .img
+      margin: auto
+      width: 5em
+      height: 6em
+    .div-input
+      display: flex
+      margin: .5em auto
+      width: 80%
+      input
+        border: 1px solid black
+        border-right: 0px
+        padding: .5em
+        width: 100%
+      button
+        border: 1px solid black
+        border-left: 0px
+        background-color: $second
+        padding: .5em
+
+
+/* //////////////// EXTRAS //////////////*/
+.fa-search
+  color: $four
+.openDropdown-menu
+  z-index: 5
+  display: flex !important
+  animation: dropdownMenuOpen 2s 1
+.closeDropdown-menu
+  z-index: 5
+  display: flex !important
+  animation: dropdownMenuClose 1s 1
+
+.cursor-inherit
+  cursor: default !important
+
+.fade
+  animation: fade 1s 1
+
+@keyframes fade
+  0%
+    opacity: 0
+    margin-top: -10vh
+  100%
+    opacity: 1
+    margin-top: 10vh
+
+@keyframes dropdownMenuOpen
+  0%
+    max-height: 0px
+    
+  100%
+    max-height: 500px
+@keyframes dropdownMenuClose
+  0%
+    max-height: 500px
+    
+  100%
+    max-height: 0px
